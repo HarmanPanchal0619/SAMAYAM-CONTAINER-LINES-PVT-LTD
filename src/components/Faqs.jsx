@@ -39,12 +39,12 @@ export default function Faqs() {
   }
 
   return (
-    <section className="relative overflow-hidden  py-16 lg:py-24">
+    <section className="relative  bg-[#f5f5f3] py-12 lg:py-20">
 
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         {/* Top */}
-        <div className="mb-14 grid gap-10 lg:grid-cols-[1fr_380px] lg:items-center">
+        <div className="mb-10 grid gap-10 lg:grid-cols-[1fr_380px] lg:items-center">
         <div>
             <h2 className="text-[60px] md:text-[80px] xl:text-[140px] font-light uppercase leading-none tracking-tight text-[#c9d3d5]">
               FAQS

@@ -1,4 +1,10 @@
+"use client"
+
+import { useState } from "react"
+
 export default function ServicesSection() {
+  const [showAll, setShowAll] = useState(false)
+
   const services = [
     {
       title: "Ocean Freight",
@@ -97,8 +103,10 @@ export default function ServicesSection() {
     },
   ]
 
+  const visibleServices = showAll ? services : services.slice(0, 8)
+
   return (
-    <section className="relative overflow-hidden bg-[#f5f5f3] py-20">
+    <section className="relative overflow-hidden bg-[#f5f5f3] pt-12 lg:pt-20 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="mb-10">
@@ -109,10 +117,10 @@ export default function ServicesSection() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
-          {services.map((item, index) => (
+          {visibleServices.map((item, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden h-[330px] ${
+              className={`group relative overflow-hidden h-[330px] transition-all duration-500 ${
                 item.type === "text"
                   ? "bg-[#dfe7e8] p-9 flex flex-col justify-between"
                   : ""
@@ -144,11 +152,29 @@ export default function ServicesSection() {
             </div>
           ))}
         </div>
+
+        {/* Buttons */}
+        <div className="flex justify-center mt-14">
+          {!showAll ? (
+            <button
+              onClick={() => setShowAll(true)}
+              className="group h-16 px-10 bg-black hover:bg-transparent border border-black text-white hover:text-black text-[17px] font-medium transition-all duration-500"
+            >
+              View More Services
+            </button>
+          ) : (
+            <button
+              onClick={() => setShowAll(false)}
+              className="group h-16 px-10 border border-black bg-white text-[#111] text-[17px] font-medium transition-all duration-500 hover:bg-black hover:text-white"
+            >
+              Hide Services
+            </button>
+          )}
+        </div>
       </div>
     </section>
   )
 }
-
 
 
 

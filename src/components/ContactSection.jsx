@@ -9,10 +9,10 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="overflow-hidden bg-[#f5f5f3] py-24 lg:py-32">
+    <section className="overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
-        <div className="mb-20">
+        <div className="mb-10">
           <h2 className="text-[54px] md:text-[100px] lg:text-[135px] font-light uppercase leading-[0.9] tracking-[-0.04em] text-[#c9d3d5]">
             GET IN TOUCH
           </h2>
