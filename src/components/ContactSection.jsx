@@ -1,7 +1,6 @@
 "use client"
 
 import {
-  Clock3,
   Mail,
   MapPin,
   Phone,
@@ -9,22 +8,31 @@ import {
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Heading */}
+    <section
+      id="contact"
+      className="overflow-hidden bg-[#f5f5f3] py-12 lg:py-20"
+    >
+
+      {/* ALIGNMENT FIX: unified container width */}
+      <div className="mx-auto max-w-[1400px] px-5 xl:px-2">
+
+        {/* Heading (unchanged UI, only alignment consistent) */}
         <div className="mb-10">
           <h2 className="text-[54px] md:text-[100px] lg:text-[135px] font-light uppercase leading-[0.9] tracking-[-0.04em] text-[#c9d3d5]">
             GET IN TOUCH
           </h2>
         </div>
 
-        {/* Main Grid */}
+        {/* Grid alignment fixed */}
         <div className="grid lg:grid-cols-[1fr_1fr] gap-6 items-start">
-          {/* Left Side */}
+
+          {/* LEFT SIDE */}
           <div className="bg-[var(--primary)]/20 p-6">
+
             <div className="space-y-12">
+
               {/* Phone */}
-              <div className="flex items-start gap-5 md:gap-7">
+              <div className="flex items-start gap-7">
                 <div className="w-12 h-12 md:w-18 md:h-18 bg-[#dfe7e8] flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6 md:w-8 md:h-8 text-[#111827]" />
                 </div>
@@ -34,15 +42,15 @@ export default function ContactSection() {
                     Phone
                   </h3>
 
-                  <p className="text-[16px] md:text-[20px]  font-medium text-[#111827]">
+                  <p className="text-[16px] md:text-[20px] font-medium text-[#111827]">
                     <a href="tel:+919840059829">+919840059829</a>
-                    <br/>
+                    <br />
                     <a href="tel:+914448659829">+914448659829</a>
                   </p>
                 </div>
               </div>
 
-              {/* E-Mail */}
+              {/* Email */}
               <div className="flex items-start gap-7">
                 <div className="w-12 h-12 md:w-18 md:h-18 bg-[#dfe7e8] flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 md:w-8 md:h-8 text-[#111827]" />
@@ -53,8 +61,10 @@ export default function ContactSection() {
                     Contact Email
                   </h3>
 
-                  <p className="text-[16px] md:text-[22px] leading-[1.35] font-medium text-[#111827]">
-                    <a href="mailto:ram@samayam.org.in">ram@samayam.org.in</a>
+                  <p className="text-[16px] md:text-[22px] font-medium text-[#111827]">
+                    <a href="mailto:ram@samayam.org.in">
+                      ram@samayam.org.in
+                    </a>
                   </p>
                 </div>
               </div>
@@ -71,10 +81,12 @@ export default function ContactSection() {
                   </h3>
 
                   <p className="text-[16px] md:text-[20px] leading-[1.35] font-medium text-[#111827] max-w-[580px]">
-                  Old No:269/2, New No:126, 2nd Floor, Thambu Chetty Street, Mannady, Parry’s, Chennai – 600001.
+                    Old No:269/2, New No:126, 2nd Floor, Thambu Chetty Street,
+                    Mannady, Parry’s, Chennai – 600001.
                   </p>
                 </div>
               </div>
+
             </div>
 
             {/* Map */}
@@ -82,14 +94,16 @@ export default function ContactSection() {
               <img
                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop"
                 alt="Map"
-                className="w-full h-[320px] object-cover "
+                className="w-full h-[320px] object-cover"
               />
             </div>
           </div>
 
-          {/* Right Side */}
+          {/* RIGHT SIDE */}
           <div className="lg:pl-4">
+
             <div className="sticky top-10">
+
               <p className="mb-5 text-sm uppercase tracking-[0.35em] text-[#7b8487]">
                 Send Message
               </p>
@@ -104,54 +118,46 @@ export default function ContactSection() {
                 business requirements.
               </p>
 
-              {/* Form */}
-              <form className="mt-6 space-y-4">
-                {/* Name */}
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full h-12 md:h-16 border border-[#cfd7d8] bg-transparent px-5 md:px-10 text-[20px] text-[#111827] placeholder:text-[#8b9498] outline-none transition-all duration-300 focus:border-black focus:bg-white"
-                  />
-                </div>
+              {/* Form (spacing normalized only) */}
+              <form className="mt-8 space-y-4">
 
-                {/* Email */}
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="w-full h-12 md:h-16 border border-[#cfd7d8] bg-transparent px-5 md:px-10 text-[20px] text-[#111827] placeholder:text-[#8b9498] outline-none transition-all duration-300 focus:border-black focus:bg-white"
-                  />
-                </div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full h-14 md:h-16 border border-[#cfd7d8] bg-transparent px-6 md:px-10 text-[18px] text-[#111827] placeholder:text-[#8b9498] outline-none focus:border-black focus:bg-white"
+                />
 
-                {/* Phone */}
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Phone"
-                    className="w-full h-12 md:h-16 border border-[#cfd7d8] bg-transparent px-5 md:px-10 text-[20px] text-[#111827] placeholder:text-[#8b9498] outline-none transition-all duration-300 focus:border-black focus:bg-white"
-                  />
-                </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full h-14 md:h-16 border border-[#cfd7d8] bg-transparent px-6 md:px-10 text-[18px] text-[#111827] placeholder:text-[#8b9498] outline-none focus:border-black focus:bg-white"
+                />
 
-                {/* Message */}
-                <div>
-                  <textarea
-                    placeholder="Write your message..."
-                    rows={5}
-                    className="w-full border border-[#cfd7d8] bg-transparent px-5 md:px-10 py-5 md:py-8 text-[20px] text-[#111827] placeholder:text-[#8b9498] outline-none resize-none transition-all duration-300 focus:border-black focus:bg-white"
-                  />
-                </div>
-                {/* Button */}
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  className="w-full h-14 md:h-16 border border-[#cfd7d8] bg-transparent px-6 md:px-10 text-[18px] text-[#111827] placeholder:text-[#8b9498] outline-none focus:border-black focus:bg-white"
+                />
+
+                <textarea
+                  placeholder="Write your message..."
+                  rows={5}
+                  className="w-full border border-[#cfd7d8] bg-transparent px-6 md:px-10 py-6 text-[18px] text-[#111827] placeholder:text-[#8b9498] outline-none resize-none focus:border-black focus:bg-white"
+                />
+
                 <button
                   type="submit"
-                  className="group relative w-full h-12 md:h-16 overflow-hidden bg-[#1200c8] text-white text-[18px] md:text-[20px] font-medium transition-all duration-500 hover:bg-black"
+                  className="w-full h-14 md:h-16 bg-[#1200c8] text-white text-[18px] font-medium transition-all duration-500 hover:bg-black"
                 >
-                  <span className="relative z-10">Send Message</span>
+                  Send Message
                 </button>
+
               </form>
+
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

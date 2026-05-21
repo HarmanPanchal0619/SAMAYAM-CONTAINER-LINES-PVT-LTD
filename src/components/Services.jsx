@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export default function ServicesSection() {
+export default function Services() {
   const [showAll, setShowAll] = useState(false)
 
   const services = [
@@ -17,7 +17,6 @@ export default function ServicesSection() {
         "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1200&auto=format&fit=crop",
       type: "image",
     },
-
     {
       title: "NVOCC Services",
       description:
@@ -29,7 +28,6 @@ export default function ServicesSection() {
         "https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1200&auto=format&fit=crop",
       type: "image",
     },
-
     {
       image:
         "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",
@@ -41,7 +39,6 @@ export default function ServicesSection() {
         "Smooth and hassle-free customs documentation and clearance support for imports and exports.",
       type: "text",
     },
-
     {
       image:
         "https://images.unsplash.com/photo-1565891741441-64926e441838?q=80&w=1200&auto=format&fit=crop",
@@ -53,7 +50,6 @@ export default function ServicesSection() {
         "Secure inland transportation services ensuring safe cargo movement across locations.",
       type: "text",
     },
-
     {
       title: "Warehousing",
       description:
@@ -65,7 +61,6 @@ export default function ServicesSection() {
         "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200&auto=format&fit=crop",
       type: "image",
     },
-
     {
       title: "Marine Insurance",
       description:
@@ -77,7 +72,6 @@ export default function ServicesSection() {
         "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1200&auto=format&fit=crop",
       type: "image",
     },
-
     {
       image:
         "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1200&auto=format&fit=crop",
@@ -89,7 +83,6 @@ export default function ServicesSection() {
         "Reliable container leasing and trading services for various shipping requirements.",
       type: "text",
     },
-
     {
       image:
         "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=1200&auto=format&fit=crop",
@@ -106,8 +99,14 @@ export default function ServicesSection() {
   const visibleServices = showAll ? services : services.slice(0, 8)
 
   return (
-    <section id="services" className="relative overflow-hidden bg-[#f5f5f3] pt-12 lg:pt-20 pb-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="services"
+      className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20"
+    >
+
+      {/* ONLY ALIGNMENT FIX: unify container with rest of site */}
+      <div className="mx-auto max-w-[1400px] px-5 xl:px-2">
+
         {/* Heading */}
         <div className="mb-10">
           <h2 className="text-[60px] md:text-[80px] xl:text-[140px] font-light uppercase leading-none tracking-tight text-[#c9d3d5]">
@@ -115,7 +114,7 @@ export default function ServicesSection() {
           </h2>
         </div>
 
-        {/* Grid */}
+        {/* Grid (UNCHANGED UI) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
           {visibleServices.map((item, index) => (
             <div
@@ -153,7 +152,7 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Buttons */}
+        {/* Buttons (alignment consistency only) */}
         <div className="flex justify-center mt-14">
           {!showAll ? (
             <button
@@ -171,6 +170,7 @@ export default function ServicesSection() {
             </button>
           )}
         </div>
+
       </div>
     </section>
   )

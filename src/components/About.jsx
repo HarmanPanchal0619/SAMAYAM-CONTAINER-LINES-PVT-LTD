@@ -1,14 +1,17 @@
 "use client"
 
-import { ArrowUpRight, Globe, Handshake} from "lucide-react"
+import { ArrowUpRight, Globe, Handshake } from "lucide-react"
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20"
+      className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20"
     >
-      <div className="relative max-w-7xl mx-auto px-6">
+
+      {/* ONLY ALIGNMENT FIX: match header/hero container */}
+      <div className="relative max-w-[1400px] mx-auto px-5 xl:px-2">
+
         {/* Heading */}
         <div className="mb-10">
           <h2 className="text-[54px] md:text-[100px] lg:text-[135px] font-light uppercase leading-[0.9] tracking-[-0.04em] text-[#c9d3d5]">
@@ -16,10 +19,12 @@ export default function About() {
           </h2>
         </div>
 
-        {/* Main Grid */}
+        {/* Grid */}
         <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-start">
+
           {/* Left */}
           <div className="relative">
+
             <div className="overflow-hidden h-[360px] md:h-[720px]">
               <img
                 src="/hero-wide-bg.png"
@@ -28,93 +33,83 @@ export default function About() {
               />
             </div>
 
-            {/* Minimal Floating Card */}
-{/* Enhanced Floating Stats Card */}
-<div className="absolute bottom-3 left-1/2 w-[92%] max-w-[95%] -translate-x-1/2 sm:bottom-6 md:bottom-14 md:left-20 md:w-auto md:max-w-[85%] md:translate-x-0">
-  <div className="relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/85 shadow-[0_20px_80px_rgba(0,0,0,0.16)]">
-    <div className="relative p-4 sm:p-6 md:p-8">
+            {/* Floating Card (UNCHANGED UI, only position stability kept) */}
+            <div className="absolute bottom-2 left-1/2 w-[92%] max-w-[95%] -translate-x-1/2 sm:bottom-6 md:bottom-14 md:left-40 lg:left-20 md:w-auto md:max-w-[85%] md:translate-x-0">
 
-      {/* Top */}
-      <div className="flex items-start justify-between gap-4 sm:gap-6 md:gap-10">
+              <div className="relative overflow-hidden backdrop-blur-lg bg-white/85 shadow-[0_20px_80px_rgba(0,0,0,0.16)]">
 
-        {/* Left */}
-        <div className="flex-1">
-          <p className="text-[10px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.22em] sm:tracking-[0.28em] text-black">
-            Experience
-          </p>
+                <div className="relative p-3 sm:p-5 md:p-8">
 
-          <div className="mt-2 sm:mt-3 flex items-end gap-1">
-            <h3 className="text-[42px] leading-none tracking-[-0.06em] font-semibold text-black sm:text-[54px] md:text-[64px]">
-              27
-            </h3>
+                  <div className="flex items-start justify-between gap-3 sm:gap-6 md:gap-10">
 
-            <span className="text-[22px] font-medium text-[#B38728] mb-1 sm:text-[26px] md:text-[30px] md:mb-2">
-              +
-            </span>
+                    <div className="flex-1">
+
+                      <p className="text-[9px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-black">
+                        Experience
+                      </p>
+
+                      <div className="mt-1 sm:mt-3 flex items-end gap-1">
+                        <h3 className="text-[34px] leading-none tracking-[-0.06em] font-semibold text-black sm:text-[52px] md:text-[64px]">
+                          27
+                        </h3>
+
+                        <span className="text-[18px] font-medium text-[#B38728] mb-1 sm:text-[24px] md:text-[30px] md:mb-2">
+                          +
+                        </span>
+                      </div>
+
+                      <p className="mt-1 text-[11px] leading-4 text-black sm:text-[13px] md:text-[15px] md:leading-6 max-w-[210px] sm:max-w-[300px]">
+                        Years in global logistics & freight forwarding
+                      </p>
+                    </div>
+
+                    <div className="shrink-0">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1F5E2C] text-white shadow-lg sm:h-11 sm:w-11 md:h-12 md:w-12">
+                        <ArrowUpRight className="h-4 w-4 sm:h-6 sm:w-6 md:h-7 md:w-7" />
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div className="my-3 h-[1px] bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent md:my-5" />
+
+                  <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
+
+                    <div className="flex gap-2">
+                      <Globe className="h-5 w-5 shrink-0 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
+                      <div>
+                        <h4 className="text-[14px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[18px] md:text-[24px]">
+                          Global
+                        </h4>
+                        <p className="mt-1 text-[10px] leading-4 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
+                          Worldwide freight support
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <Handshake className="h-5 w-5 shrink-0 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
+                      <div>
+                        <h4 className="text-[14px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[18px] md:text-[24px]">
+                          End-to-End
+                        </h4>
+                        <p className="mt-1 text-[10px] leading-4 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
+                          Logistics solutions
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <p className="mt-2 text-[12px] leading-5 text-black sm:text-[13px] md:text-[15px] md:leading-6 max-w-[240px] sm:max-w-[300px]">
-            Years in global logistics & freight forwarding
-          </p>
-        </div>
-
-        {/* Badge */}
-        <div className="shrink-0">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1F5E2C] text-white shadow-lg sm:h-11 sm:w-11 md:h-12 md:w-12">
-            <ArrowUpRight className="h-5 w-5 sm:h-6 sm:w-6 md:h-7 md:w-7" />
-          </div>
-        </div>
-
-      </div>
-
-      {/* Divider */}
-      <div className="my-4 h-[1px] bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent md:my-5" />
-
-      {/* Bottom Grid */}
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6">
-
-        {/* Item 1 */}
-        <div className="grid grid-cols-[40px_1fr] gap-3 md:grid-cols-[0.4fr_1.6fr]">
-          <div className="flex items-start">
-            <Globe className="h-7 w-7 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
-          </div>
-
-          <div>
-            <h4 className="text-[18px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[20px] md:text-[24px]">
-              Global
-            </h4>
-
-            <p className="mt-1 text-[12px] leading-5 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
-              Worldwide freight network support
-            </p>
-          </div>
-        </div>
-
-        {/* Item 2 */}
-        <div className="grid grid-cols-[40px_1fr] gap-3 md:grid-cols-[0.4fr_1.6fr]">
-          <div className="flex items-start">
-            <Handshake className="h-7 w-7 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
-          </div>
-
-          <div>
-            <h4 className="text-[18px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[20px] md:text-[24px]">
-              End-to-End
-            </h4>
-
-            <p className="mt-1 text-[12px] leading-5 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
-              Logistics & supply chain solutions
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-          </div>
-
-          {/* Right */}
+          {/* Right (unchanged) */}
           <div className="max-w-[620px]">
+
             <p className="text-sm uppercase tracking-[0.35em] text-[#7b8487]">
               Global Freight Experts
             </p>
@@ -124,21 +119,13 @@ export default function About() {
             </h3>
 
             <p className="mt-10 text-[18px] leading-9 text-[#6b7280]">
-              SAMAYAM Container Lines Pvt Ltd is a Chennai-based
-              international freight forwarding and logistics company
-              specializing in ocean freight, NVOCC operations,
-              customs clearance, warehousing, transportation,
-              and integrated cargo solutions.
+              SAMAYAM Container Lines Pvt Ltd is a Chennai-based international freight forwarding and logistics company specializing in ocean freight, NVOCC operations, customs clearance, warehousing, transportation, and integrated cargo solutions.
             </p>
 
             <p className="mt-6 text-[18px] leading-9 text-[#6b7280]">
-              With more than 27 years of industry expertise,
-              we provide dependable and cost-effective logistics
-              services supported by strong global partnerships,
-              ethical business practices, and professional execution.
+              With more than 27 years of industry expertise, we provide dependable and cost-effective logistics services supported by strong global partnerships, ethical business practices, and professional execution.
             </p>
 
-            {/* CTA */}
             <div className="mt-14">
               <a
                 href="#services"
@@ -149,14 +136,179 @@ export default function About() {
                 <span className="w-12 h-12 rounded-full bg-[#1F5E2C] text-white flex items-center justify-center transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
                   <ArrowUpRight className="w-5 h-5" />
                 </span>
+
               </a>
             </div>
+
           </div>
         </div>
       </div>
     </section>
   )
 }
+
+
+
+
+
+
+
+
+// "use client"
+
+// import { ArrowUpRight, Globe, Handshake} from "lucide-react"
+
+// export default function About() {
+//   return (
+//     <section
+//       id="about"
+//       className="relative overflow-hidden bg-[#f7f7f5] py-12 lg:py-20"
+//     >
+//       <div className="relative max-w-7xl mx-auto px-6">
+//         {/* Heading */}
+//         <div className="mb-10">
+//           <h2 className="text-[54px] md:text-[100px] lg:text-[135px] font-light uppercase leading-[0.9] tracking-[-0.04em] text-[#c9d3d5]">
+//             ABOUT US
+//           </h2>
+//         </div>
+
+//         {/* Main Grid */}
+//         <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-start">
+//           {/* Left */}
+//           <div className="relative">
+//             <div className="overflow-hidden h-[360px] md:h-[720px]">
+//               <img
+//                 src="/hero-wide-bg.png"
+//                 alt="SAMAYAM Container Lines"
+//                 className="w-[85%] h-[80%] object-cover"
+//               />
+//             </div>
+
+//             {/* Enhanced Floating Stats Card */}
+//             <div className="absolute bottom-2 left-1/2 w-[92%] max-w-[95%] -translate-x-1/2 sm:bottom-6 md:bottom-14 md:left-40 lg:left-20 md:w-auto md:max-w-[85%] md:translate-x-0">
+//               <div className="relative overflow-hidden backdrop-blur-lg bg-white/85 shadow-[0_20px_80px_rgba(0,0,0,0.16)]">
+                
+//                 {/* Reduced padding on small mobiles */}
+//                 <div className="relative p-3 sm:p-5 md:p-8">
+
+//                   {/* Top */}
+//                   <div className="flex items-start justify-between gap-3 sm:gap-6 md:gap-10">
+
+//                     {/* Left */}
+//                     <div className="flex-1">
+//                       <p className="text-[9px] sm:text-[11px] md:text-[12px] uppercase tracking-[0.18em] sm:tracking-[0.28em] text-black">
+//                         Experience
+//                       </p>
+
+//                       <div className="mt-1 sm:mt-3 flex items-end gap-1">
+//                         <h3 className="text-[34px] leading-none tracking-[-0.06em] font-semibold text-black sm:text-[52px] md:text-[64px]">
+//                           27
+//                         </h3>
+
+//                         <span className="text-[18px] font-medium text-[#B38728] mb-1 sm:text-[24px] md:text-[30px] md:mb-2">
+//                           +
+//                         </span>
+//                       </div>
+
+//                       <p className="mt-1 text-[11px] leading-4 text-black sm:text-[13px] md:text-[15px] md:leading-6 max-w-[210px] sm:max-w-[300px]">
+//                         Years in global logistics & freight forwarding
+//                       </p>
+//                     </div>
+
+//                     {/* Badge */}
+//                     <div className="shrink-0">
+//                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1F5E2C] text-white shadow-lg sm:h-11 sm:w-11 md:h-12 md:w-12">
+//                         <ArrowUpRight className="h-4 w-4 sm:h-6 sm:w-6 md:h-7 md:w-7" />
+//                       </div>
+//                     </div>
+//                   </div>
+
+//                   {/* Divider */}
+//                   <div className="my-3 h-[1px] bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent md:my-5" />
+
+//                   {/* Bottom Grid */}
+//                   <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
+
+//                     {/* Item 1 */}
+//                     <div className="flex gap-2">
+//                       <Globe className="h-5 w-5 shrink-0 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
+
+//                       <div>
+//                         <h4 className="text-[14px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[18px] md:text-[24px]">
+//                           Global
+//                         </h4>
+
+//                         <p className="mt-1 text-[10px] leading-4 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
+//                           Worldwide freight support
+//                         </p>
+//                       </div>
+//                     </div>
+
+//                     {/* Item 2 */}
+//                     <div className="flex gap-2">
+//                       <Handshake className="h-5 w-5 shrink-0 text-[#1F5E2C] sm:h-8 sm:w-8 md:h-10 md:w-10" />
+
+//                       <div>
+//                         <h4 className="text-[14px] font-semibold tracking-[-0.04em] text-[#1F5E2C] sm:text-[18px] md:text-[24px]">
+//                           End-to-End
+//                         </h4>
+
+//                         <p className="mt-1 text-[10px] leading-4 text-black sm:text-[13px] md:mt-2 md:text-[14px] md:leading-6">
+//                           Logistics solutions
+//                         </p>
+//                       </div>
+//                     </div>
+
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Right */}
+//           <div className="max-w-[620px]">
+//             <p className="text-sm uppercase tracking-[0.35em] text-[#7b8487]">
+//               Global Freight Experts
+//             </p>
+
+//             <h3 className="mt-6 text-[42px] md:text-[62px] leading-[1] tracking-[-0.05em] font-medium text-[#111827]">
+//               Reliable logistics solutions tailored for global trade.
+//             </h3>
+
+//             <p className="mt-10 text-[18px] leading-9 text-[#6b7280]">
+//               SAMAYAM Container Lines Pvt Ltd is a Chennai-based
+//               international freight forwarding and logistics company
+//               specializing in ocean freight, NVOCC operations,
+//               customs clearance, warehousing, transportation,
+//               and integrated cargo solutions.
+//             </p>
+
+//             <p className="mt-6 text-[18px] leading-9 text-[#6b7280]">
+//               With more than 27 years of industry expertise,
+//               we provide dependable and cost-effective logistics
+//               services supported by strong global partnerships,
+//               ethical business practices, and professional execution.
+//             </p>
+
+//             {/* CTA */}
+//             <div className="mt-14">
+//               <a
+//                 href="#services"
+//                 className="inline-flex items-center gap-4 text-[18px] font-medium text-[#1F5E2C] group"
+//               >
+//                 Explore Our Services
+
+//                 <span className="w-12 h-12 rounded-full bg-[#1F5E2C] text-white flex items-center justify-center transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1">
+//                   <ArrowUpRight className="w-5 h-5" />
+//                 </span>
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 
 
 

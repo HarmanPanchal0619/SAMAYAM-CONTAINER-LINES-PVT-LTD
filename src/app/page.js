@@ -16,8 +16,8 @@ function page() {
     <Services/>
     <GallerySection/>
     <WhyChooseUs/>
-    <Faqs/>
     <ContactSection/>
+    <Faqs/>
     <Cta/>
     <Footer/>
     </>

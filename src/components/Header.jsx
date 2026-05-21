@@ -66,7 +66,11 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="flex items-center text-[15px] font-500 tracking-[1px] transition hover:text-white/65"
+              className={`flex items-center text-[15px] font-500 tracking-[1px] transition ${
+                scrolled || menuOpen
+                  ? "hover:text-black/65"
+                  : "hover:text-white/65"
+              }`}
             >
               {item.label}
             </Link>

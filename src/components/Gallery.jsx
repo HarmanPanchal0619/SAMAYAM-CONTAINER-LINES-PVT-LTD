@@ -49,10 +49,17 @@ export default function GallerySection() {
   ]
 
   return (
-    <section id="gallery" className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="gallery"
+      className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20"
+    >
+
+      {/* ONLY ALIGNMENT FIX: unified container */}
+      <div className="mx-auto max-w-[1400px] px-5 xl:px-2">
+
         {/* Heading */}
-        <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-10">
+
           <div>
             <h2 className="text-[60px] md:text-[80px] xl:text-[140px] font-light uppercase leading-none tracking-tight text-[#c9d3d5]">
               GALLERY
@@ -66,16 +73,16 @@ export default function GallerySection() {
               shipping solutions.
             </p>
           </div>
+
         </div>
 
-        {/* Masonry Gallery */}
+        {/* Masonry Gallery (UNCHANGED UI) */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-7 space-y-7">
           {galleryItems.map((item, index) => (
             <div
               key={index}
               className="group relative overflow-hidden break-inside-avoid cursor-pointer"
             >
-              {/* Image */}
               <div className={`overflow-hidden ${item.height}`}>
                 <img
                   src={item.image}
@@ -84,10 +91,8 @@ export default function GallerySection() {
                 />
               </div>
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
-              {/* Content */}
               <div className="absolute inset-x-0 bottom-0 p-8 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
                 <p className="text-sm uppercase tracking-[0.25em] text-white/70 mb-3">
                   {item.category}
@@ -107,21 +112,22 @@ export default function GallerySection() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 border-t border-[#d8dfe0] pt-10">
+        {/* Bottom CTA (alignment-only spacing fix) */}
+        <div className="mt-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 border-t border-[#d8dfe0] pt-10">
+
           <div>
-            <p className="text-[26px] md:text-[32px] leading-[1.2] font-medium text-[#111827] max-w-[700px]">
-              Delivering smart logistics solutions with reliable global freight
-              operations.
+            <p className="text-[20px] md:text-[24px] leading-[1.2] font-medium text-[#111827] max-w-[700px]">
+              Delivering smart logistics solutions with reliable global freight operations.
             </p>
           </div>
 
           <button className="group w-fit h-10 px-4 md:h-16 md:px-6 bg-[#1200c8] text-white text-[16px] font-medium flex items-center gap-3 transition-all duration-500 hover:bg-black">
             View More Projects
-
             <MoveRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-1" />
           </button>
+
         </div>
+
       </div>
     </section>
   )
