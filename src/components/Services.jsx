@@ -106,7 +106,7 @@ export default function ServicesSection() {
   const visibleServices = showAll ? services : services.slice(0, 8)
 
   return (
-    <section className="relative overflow-hidden bg-[#f5f5f3] pt-12 lg:pt-20 pb-20">
+    <section id="services" className="relative overflow-hidden bg-[#f5f5f3] pt-12 lg:pt-20 pb-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="mb-10">

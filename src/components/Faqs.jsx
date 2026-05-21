@@ -39,7 +39,7 @@ export default function Faqs() {
   }
 
   return (
-    <section className="relative  bg-[#f5f5f3] py-12 lg:py-20">
+    <section id="faqs" className="relative  bg-[#f5f5f3] py-12 lg:py-20">
 
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">

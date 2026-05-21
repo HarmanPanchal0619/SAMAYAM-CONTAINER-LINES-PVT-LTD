@@ -9,7 +9,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
+    <section id="contact" className="overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="mb-10">
@@ -124,11 +124,11 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Subject */}
+                {/* Phone */}
                 <div>
                   <input
                     type="text"
-                    placeholder="Subject"
+                    placeholder="Phone"
                     className="w-full h-12 md:h-16 border border-[#cfd7d8] bg-transparent px-5 md:px-10 text-[20px] text-[#111827] placeholder:text-[#8b9498] outline-none transition-all duration-300 focus:border-black focus:bg-white"
                   />
                 </div>

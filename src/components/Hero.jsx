@@ -4,7 +4,7 @@ import { ArrowDown } from "lucide-react"
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
       <div
         className="hidden lg:flex absolute inset-0 bg-cover bg-center"

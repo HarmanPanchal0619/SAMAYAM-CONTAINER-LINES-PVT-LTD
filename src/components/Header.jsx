@@ -16,7 +16,7 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Blog", href: "#blog" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Contact Us", href: "#contact" },
   ]
 
@@ -39,7 +39,7 @@ export default function Header() {
     ${
       scrolled || menuOpen
         ? " backdrop-blur-lg bg-[white]/80 text-black shadow-[0_4px_32px_rgba(0,0,0,0.2)] after:content-[''] after:block after:w-[100%] after:border-b after:border-black/[0.4] after:mx-auto"
-        : "bg-transparent text-white after:content-[''] after:block after:w-[92%] after:border-b after:border-white/[0.4] after:mx-auto"
+        : "bg-transparent text-white"
     }`}>
       <div className="mx-auto flex max-w-[1400px] h-[10vh] items-center justify-between px-5 xl:px-2">
         {/* Logo */}

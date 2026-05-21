@@ -49,7 +49,7 @@ export default function GallerySection() {
   ]
 
   return (
-    <section className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
+    <section id="gallery" className="relative overflow-hidden bg-[#f5f5f3] py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-10">

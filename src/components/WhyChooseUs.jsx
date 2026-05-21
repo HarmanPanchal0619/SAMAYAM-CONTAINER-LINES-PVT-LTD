@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
   }, [slides.length])
 
   return (
-    <section className="relative bg-[#f5f5f3] py-12 lg:py-20 overflow-hidden">
+    <section id="whychooseus" className="relative bg-[#f5f5f3] py-12 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
       <div className="mb-10">
           <h2 className="text-[60px] md:text-[80px] xl:text-[140px] font-light uppercase leading-none tracking-tight text-[#c9d3d5]">
